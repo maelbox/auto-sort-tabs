@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <style>
+            html,
+            body {
+                width: 250px;
+                min-height: 260px;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                padding: 15px;
+                font-family: sans-serif;
+                font-size: 14px;
+                background-color: #242424;
+                color: #ffffff;
+            }
+            h2 {
+                margin-top: 0;
+                font-size: 16px;
+            }
+            label {
+                display: block;
+                margin-bottom: 8px;
+                cursor: pointer;
+            }
+            input[type="radio"] {
+                margin-right: 8px;
+            }
+            .section {
+                margin-bottom: 15px;
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 10px;
+            }
+            .toggle {
+                font-weight: bold;
+            }
+            button {
+                width: 100%;
+                padding: 8px;
+                background-color: #e36b20;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #ff6200;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Auto Sort Tabs</h2>
+
+        <div class="section">
+            <label class="toggle">
+                <input type="checkbox" id="autoSort" /> Auto Sort Tabs
+            </label>
+            <label class="toggle">
+                <input type="checkbox" id="groupByDomain" /> Group by Domain
+            </label>
+        </div>
+
+        <div class="section">
+            <strong>Sort by:</strong>
+            <div style="margin-top: 5px">
+                <fieldset id="methodFieldset">
+                    <label>
+                        Creation Date
+                        <input
+                            type="radio"
+                            name="method"
+                            value="created"
+                            checked
+                        />
+                    </label>
+                    <label>
+                        Recency
+                        <input type="radio" name="method" value="recency" />
+                    </label>
+                    <label>
+                        Title
+                        <input type="radio" name="method" value="title" />
+                    </label>
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="section">
+            <strong>Sort order:</strong>
+            <div style="margin-top: 5px">
+        </div>
+
+        <button id="toggleDirection">Sort Order</button>
+
+        <script src="popup.js"></script>
+    </body>
+</html>
